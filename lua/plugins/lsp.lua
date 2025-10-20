@@ -1,8 +1,4 @@
-return {
-  "neovim/nvim-lspconfig",
-  opts = {
-    servers = {
-      jdtls = {}, -- ✅ Enable Java LSP
-    },
-  },
-}
+-- Add this in your LSP setup file
+require("lspconfig").ts_ls.setup({
+  capabilities = require("cmp_nvim_lsp").default_capabilities(),
+})
